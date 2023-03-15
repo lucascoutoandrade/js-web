@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where do you live?</title>
+    <style>
+        body {
+            background: rgb(243, 227, 245);
+            font: normal 18pt Arial;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Sistema de Reconhecimento</h1>
+    Informe qual seu nome: <input type="text" id="name"> <br>
+    Informe seu país: <input type="text" id="place">
+    <input type="button" id="btnInforma" value="Imprimir" onclick="imprimir()">
+    <div id="result"></div>
+
+    <script>
+
+        function imprimir() {
+
+            var name = window.document.querySelector(`input#name`).value
+            var country = window.document.querySelector(`input#place`).value
+            var result = window.document.getElementById("result")
+
+            if (country.toUpperCase() == 'BRASIL'){
+
+                result.innerHTML = `<p>Seu nome é <strong>${name}</strong> e vc <strong>não é estrangeiro</strong> pq mora no <strong>${country}</strong></p>`
+            }else{
+                result.innerHTML = `<p>Seu nome é <strong>${name}</strong> e vc <strong> É ESTRANGEIRO</strong>  pq mora no <strong>${country}</strong></p>`
+            }
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
